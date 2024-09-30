@@ -15,10 +15,10 @@ ensure secure access. Script run daily via CRON.
 
 Define the following environment variables in .env file:
 ```
-SOURCE_DIR="/home/user/source_files"
+SOURCE_DIR="/path/to/source_files"
 USR_GRP="user:group"
 PERMISSIONS="0644"
-DESTINATION="user@10.15.1.20:/mnt/archive/network_logs"
+DESTINATION="user@10.15.1.20:/path/to/destination_files"
 ```
 
 ```
@@ -27,5 +27,5 @@ crontab -e
 
 Run script at 0100 hours daily:
 ```
-0 1 * * * /path/to/logtransfer.sh
+0 1 * * * cd /path/to/envfile && /path/to/logtransfer.sh
 ```

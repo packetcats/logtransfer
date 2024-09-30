@@ -36,7 +36,7 @@ for file in *; do
 
     # Proceed if a date was found in the filename
     if [[ ! -z "$file_date" ]]; then
-        # Check if the file date is less than yesterday's date
+        # Check if the file date is less than current date
         if [[ "$file_date" < "$CURRENT_DATE" ]]; then
             echo "Processing $file..."
 
